@@ -1,8 +1,3 @@
-# color
-
-gst color code : #BEBEC0 #B32821
-color palette to use : #a5423d #f6e8e9 #a96f75
-
 another idea :
 dark | little dark | bright | little bright
 #a5423d | #bc827b | #fff6f4 | #f3eed9
