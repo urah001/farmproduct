@@ -107,8 +107,9 @@ the featured product is the component that returns the product hook
 # testing
 
 testing your api :
-http://localhost:1337/api/[name]?populate=_
-http://localhost:1337/api/posts?populate=_
+http://localhost:1337/api/[name]?populate=*
+http://localhost:1337/api/posts?populate=*
+
 
 # learning
 
