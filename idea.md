@@ -3,7 +3,7 @@ dark | little dark | bright | little bright
 #a5423d | #bc827b | #fff6f4 | #f3eed9
 
 60 30 10
-
+remeber : 2  4  9
 # to do
 
 add pic
