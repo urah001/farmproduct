@@ -129,3 +129,22 @@ Home Beauty ,home-kitchen, logistics-transport, digital-tech, training-ed, repai
 # todo
 authentication
 responsiveness
+
+
+
+# future docs 
+* 1a try and understand the the testing/page
+*  1b http://localhost:1337/api/posts?populate=* : check if you can acess the data via json format 
+* set api permission : 
+By default, Strapi blocks public access to your API.
+
+  -  Go to Settings > Roles & Permissions.
+  
+  -  Under Public, enable find and findOne for your collection (posts).
+
+  - Click Save.
+  if work: 
+repeat 1b
+if works well and you understand testing/page 
+then edit to your liking
+
