@@ -71,15 +71,13 @@ then edit to your liking
 
 bus - tp
 famer - feed
-food - feed
+food recommendation - feed
 clinic - emergency
 
 # how it works
 the `layout.tsx` is used to render the site layout, where the  `header` and `footer` comp are global in every rendered page. 
-to avoid error leave the `CartProvider`
+to avoid error leave the `CartProvider` the `usecart` needs it
 
-starting page is the `page.ts`
-the unchangeable is a branch i will use for other project that concerns ecommercing 
-
-
-the component `HeroSection` : for the image and side writing 
+starting page is the `page.ts`:
+the unchangeable is a branch i will use for other project that concerns ecommercing .
+the component `HeroSection` : for the image and side writing  
