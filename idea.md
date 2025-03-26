@@ -11,85 +11,6 @@ add a mock up profile page
 remove the cart icon
 find like a booked icon
 
-1. ### **Service Rendering Jobs in Nigeria 🇳🇬**
-   **1. Home & Domestic Services 🏡**
-   - House Cleaning
-   - Laundry & Dry Cleaning
-   - Plumbing Services
-   - Electrical Repairs
-   - Painting Services
-   - Carpentry & Furniture Repairs
-   - Pest Control
-
-#### **2. Beauty & Personal Care 💇‍♂️💅**
-
-- Barbing & Hairdressing
-- Makeup Artistry
-- Nail Technician (Manicure & Pedicure)
-- Skincare & Spa Services
-- Massage Therapy
-
-#### **3. Events & Entertainment 🎉🎤**
-
-- Event Planning & Decoration
-- Photography & Videography
-- DJ & Live Band Services
-- Catering & Small Chops
-- MC/Host Services
-- Stage & Lighting Setup
-- Sound System Rentals
-
-#### **4. Transport & Logistics 🚗🚛**
-
-- Ride-Hailing (Uber, Bolt, InDriver)
-- Motorbike Delivery (Okada, Gokada, MaxNG)
-- Dispatch Rider Services
-- Inter-State Transportation
-- Car Rental Services
-- Moving & Relocation Services
-
-#### **5. Digital & Tech Services 💻📱**
-
-- Website Development
-- Graphic Design & Branding
-- Digital Marketing & SEO
-- Mobile App Development
-- Cybersecurity & Ethical Hacking
-- Video Editing & Animation
-- Software Development
-- Computer & Phone Repairs
-
-#### **6. Health & Wellness 🏥💊**
-
-- Home Nursing Services
-- Physiotherapy
-- Personal Fitness Training
-- Herbal & Alternative Medicine
-- Diet & Nutrition Consulting
-- Midwifery & Childbirth Assistance
-
-#### **7. Education & Training 📚🎓**
-
-- Private Tutoring
-- Online Coaching & Mentorship
-- Language Translation & Interpretation
-- Skill Acquisition Training (Tech, Fashion, Handwork)
-- Vocational Training (Mechanic, Welding, Tailoring)
-
-#### **8. Repairs & Maintenance 🛠️**
-
-- Generator Repairs
-- Air Conditioner & Fridge Repairs
-- Car Repairs & Auto Mechanics
-- Tailoring & Cloth Mending
-- Shoe Making & Repairs
-
-
-#### **9. Security & Protection 🔒🚔**
-- Private Security Guards
-- CCTV Installation & Monitoring
-- Bouncers & Event Security
-- Locksmith Services
 
 # Where to Download Crop Images? 📸
 
@@ -128,7 +49,7 @@ Home Beauty ,home-kitchen, logistics-transport, digital-tech, training-ed, repai
 
 # todo
 authentication
-responsiveness
+
 
 
 
@@ -147,4 +68,6 @@ By default, Strapi blocks public access to your API.
 repeat 1b
 if works well and you understand testing/page 
 then edit to your liking
+
+
 

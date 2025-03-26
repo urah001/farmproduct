@@ -44,7 +44,7 @@ export default function ProductGrid({
         const fetchedProducts = data.data.map((item: any) => ({
           id: item.id,
           name: item.attributes?.name || item.Title || "Unknown Product",
-          price: item.attributes?.price || item.Price || 0,
+          price: item.attributes?.price || item.price || 0,
           image: item.attributes?.image?.data?.attributes?.url
             ? `${API_URL}${item.attributes.image.data.attributes.url}`
             : item.image?.url
@@ -116,7 +116,7 @@ function ProductCard({ product }: { product: Product }) {
         <Link href={`/products/${product.slug}`} className="hover:underline">
           <h3 className="font-medium text-lg mb-2">{product.name}</h3>
         </Link>
-        <p className="font-bold">${product.price.toFixed(2)}</p>
+        <p className="font-bold">${product.price}</p>
       </CardContent>
       <CardFooter className="p-4 pt-0">
         <Button
@@ -129,3 +129,4 @@ function ProductCard({ product }: { product: Product }) {
     </Card>
   );
 }
+
