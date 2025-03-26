@@ -53,7 +53,7 @@ authentication
 
 
 
-# future docs 
+# future docs [ how strapi is configured ]
 * 1a try and understand the the testing/page
 *  1b http://localhost:1337/api/posts?populate=* : check if you can acess the data via json format 
 * set api permission : 
@@ -69,5 +69,17 @@ repeat 1b
 if works well and you understand testing/page 
 then edit to your liking
 
+bus - tp
+famer - feed
+food - feed
+clinic - emergency
+
+# how it works
+the `layout.tsx` is used to render the site layout, where the  `header` and `footer` comp are global in every rendered page. 
+to avoid error leave the `CartProvider`
+
+starting page is the `page.ts`
+the unchangeable is a branch i will use for other project that concerns ecommercing 
 
 
+the component `HeroSection` : for the image and side writing 
