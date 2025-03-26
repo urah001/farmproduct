@@ -12,12 +12,13 @@ export function HeroSection() {
               Food that fit Your Health [placeholder]
             </h1>
             <p className="max-w-[600px] text-muted-foreground md:text-xl">
-              Get quality , fresh and affordable foods and crops straight from the farm [ this is just a placeholder ] .
+              Get quality , fresh and affordable foods and crops straight from
+              the farm [ this is just a placeholder ] .
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild>
-
-                <Link href="/products">find service</Link>
+                {/* takes you to a place where food and crops are seen in random order */}
+                <Link href="/products">find crops</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 {/* browse by by categories : take to the page where all crops are grouped by categories */}
@@ -27,6 +28,7 @@ export function HeroSection() {
           </div>
           <div className="flex justify-center">
             <div className="relative w-full max-w-[500px] aspect-[4/3] overflow-hidden rounded-xl">
+          {/* change this image */}
               <Image
                 src="/serviceFeatured.jpg"
                 alt="Featured products showcase"
