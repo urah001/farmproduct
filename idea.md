@@ -4,19 +4,22 @@ dark | little dark | bright | little bright
 
 60 30 10
 remeber : 2  4  9
+
 # to do
-
-add pic
-add a mock up profile page
-remove the cart icon
+- add pic
+- add a mock up profile page
+- remove the cart icon
 find like a booked icon
-
+- edit the profile page to collect data from kinde 
+- authentication
+- add landig page
+- remove the category images 
 
 # Where to Download Crop Images? 📸
 
-    Unsplash (Free HD images) – https://unsplash.com/s/photos/farm-crops
-    Pexels (Free images) – https://www.pexels.com/search/crops/
-    Pixabay (No copyright restrictions) – https://pixabay.com/images/search/farm/
+   - Unsplash (Free HD images) – https://unsplash.com/s/photos/farm-crops
+   - Pexels (Free images) – https://www.pexels.com/search/crops/
+   - Pixabay (No copyright restrictions) – https://pixabay.com/images/search/farm/
 
 # learning
 
@@ -47,8 +50,6 @@ change the category in the app/category/[slug]/: {this is where the slug for eac
 
 Home Beauty ,home-kitchen, logistics-transport, digital-tech, training-ed, repairs
 
-# todo
-authentication
 
 
 
@@ -75,9 +76,20 @@ food recommendation - feed
 clinic - emergency
 
 # how it works
+
+word without the extension [.tsx , .jsx ]: is a component
+word with the extension [.tsx , .jsx ]: is a file / directory
+
 the `layout.tsx` is used to render the site layout, where the  `header` and `footer` comp are global in every rendered page. 
 to avoid error leave the `CartProvider` the `usecart` needs it
 
 starting page is the `page.ts`:
 the unchangeable is a branch i will use for other project that concerns ecommercing .
-the component `HeroSection` : for the image and side writing  
+the component `HeroSection` : for the image and side writing  .
+
+`header` 
+using object routes for navigation :
+_const routes =[{}]_
+
+**remember** to fix the `about.tsx`
+page contains mobile repondsiveness
