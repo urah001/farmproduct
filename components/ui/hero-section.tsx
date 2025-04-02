@@ -30,7 +30,7 @@ export function HeroSection() {
             <div className="relative w-full max-w-[500px] aspect-[4/3] overflow-hidden rounded-xl">
           {/* change this image */}
               <Image
-                src="/serviceFeatured.jpg"
+                src="/famer.svg"
                 alt="Featured products showcase"
                 layout="fill" /* Stretches image to fit the parent */
                 objectFit="cover" /* Ensures the image covers the area */

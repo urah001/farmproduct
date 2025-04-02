@@ -3,9 +3,12 @@ import ProductGrid from "@/components/ui/product-grid";
 import { FeaturedProducts } from "@/components/ui/featured-products";
 import { HeroSection } from "@/components/ui/hero-section";
 import { CategoryList } from "@/components/ui/category-list";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
+  //a simple auth that redirect user is they are logged in or not , just for testing purposes only 
+  const user = false;
+  return user ? (
     <main className="flex-1">
       <HeroSection />
       <div className="container px-4 md:px-6 py-8">
@@ -43,5 +46,7 @@ export default function Home() {
         </section>
       </div>
     </main>
+  ) : (
+    redirect("/landing")
   );
 }
