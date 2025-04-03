@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Search, Settings, ShoppingCart, User, X } from "lucide-react";
+import { Apple, Menu, Search, ShoppingCart, User, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -16,8 +16,8 @@ export default function Header() {
 
   const routes = [
     { href: "/", label: "Home" },
-    { href: "/products", label: "Find Services" },
-    { href: "/categories", label: "Service Categories" },
+    { href: "/products", label: "Find Crops" },
+    { href: "/categories", label: "Crops Categories" },
     { href: "/about", label: "About" },
     // { href: "/contact", label: "Contact" },
   ];
@@ -47,10 +47,13 @@ export default function Header() {
           </SheetContent>
         </Sheet>
         <Link href="/" className="ml-4 md:ml-0 flex items-center gap-2">
-          <Settings className="h-6 w-6" />
-          <span className="font-bold text-xl">RunAM</span>
+          {/* header icon top left corner */}
+          <Apple className="h-6 w-6" />
+          {/* header name beside icon at left corner*/}
+          <span className="font-bold text-xl">FarmerHome[]</span>
         </Link>
         <nav className="mx-6 hidden md:flex items-center gap-6 text-sm">
+        {/* mapping to display link in a row format */}
           {routes.map((route) => (
             <Link
               key={route.href}
@@ -61,11 +64,13 @@ export default function Header() {
                   : "text-muted-foreground"
               }`}
             >
+              {/* getting the data to paste from the variable name untop */}
               {route.label}
             </Link>
           ))}
         </nav>
         <div className="ml-auto flex items-center gap-2">
+          {/* the conditional statement for that  */}
           {isSearchOpen ? (
             <div className="relative flex items-center">
               <Input
@@ -80,6 +85,7 @@ export default function Header() {
                 className="absolute right-0"
                 onClick={() => setIsSearchOpen(false)}
               >
+                {/* where the input for search is open , it shows this func to close  */}
                 <X className="h-4 w-4" />
                 <span className="sr-only">Close search</span>
               </Button>
