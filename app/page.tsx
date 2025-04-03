@@ -1,16 +1,17 @@
 import Link from "next/link";
 import ProductGrid from "@/components/ui/product-grid";
 import { FeaturedProducts } from "@/components/ui/featured-products";
-import { HeroSection } from "@/components/ui/hero-section";
+//import { HeroSection } from "@/components/ui/hero-section";
 import { CategoryList } from "@/components/ui/category-list";
 import { redirect } from "next/navigation";
 
 export default function Home() {
   //a simple auth that redirect user is they are logged in or not , just for testing purposes only 
+  //const user = true;
   const user = false;
   return user ? (
     <main className="flex-1">
-      <HeroSection />
+      {/* <HeroSection /> */}
       <div className="container px-4 md:px-6 py-8">
         <section>
           <div className="flex items-center justify-between mb-2">
