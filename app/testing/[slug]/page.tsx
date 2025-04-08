@@ -109,7 +109,7 @@ export default function ProductSlug() {
                 onClick={() => addItem({ ...product, quantity })}
               >
                 <ShoppingCart className="mr-2 h-5 w-5" />
-                Order Service
+                Add to cart
               </Button>
             </div>
           </div>
