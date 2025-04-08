@@ -9,9 +9,9 @@ export default function CategoryPage() {
       <div className="container px-4 md:px-6 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">All Service Categories</h1>
+            <h1 className="text-3xl font-bold tracking-tight">All Products Categories</h1>
             <p className="text-muted-foreground">
-              Browse our collection of high-skilled service renderers
+              Browse our collection of Foods by CATEGORIES
             </p>
           </div>
           <div className="flex items-center gap-4">

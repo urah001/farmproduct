@@ -14,6 +14,7 @@ find like a booked icon
 - authentication
 - add landig page
 - remove the category images 
+-  change the categories pictures and name 
 
 # Where to Download Crop Images? 📸
 

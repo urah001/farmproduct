@@ -1,20 +1,42 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { ChevronLeft, Minus, Plus, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/components/ui/cart-provider";
 import Image from "next/image";
-import { allProducts } from "@/app/data/product"; // ✅ Import products
 import Link from "next/link";
+import { getAllProducts } from "@/app/data/fetchData";
+
+interface ProductType {
+  id: number;
+  name: string;
+  price: number;
+  slug: string;
+  description: string;
+  image: string;
+  features: string[];
+};
 
 export default function ProductSlug() {
   const { slug } = useParams();
+  const [product, setProduct] = useState<ProductType | null>(null);
   const [quantity, setQuantity] = useState(1);
   const { addItem } = useCart();
 
-  const product = allProducts.find((p) => p.slug === slug);
+  useEffect(() => {
+    async function fetchData() {
+      //const res = await fetch("http://localhost:1337/api/posts?populate=*");
+      const res = await getAllProducts();
+      //const data = await res.json();
+      const filteredData = [...res];
+      const found = filteredData.find((p: ProductType) => p.slug === slug);
+      setProduct(found || null);
+    }
+
+    fetchData();
+  }, [slug]);
 
   if (!product) {
     return (
@@ -24,7 +46,7 @@ export default function ProductSlug() {
           Sorry, the product youre looking for doesnt exist.
         </p>
         <Button asChild className="cursor-pointer">
-          <Link href="/products">Back to Products</Link>
+          <Link href="/products">Back to Fresh Products</Link>
         </Button>
       </div>
     );
@@ -36,7 +58,7 @@ export default function ProductSlug() {
         <Button
           variant="ghost"
           className="mb-6"
-          onClick={() => window.history.back()} // JavaScript way of going back
+          onClick={() => window.history.back()}
         >
           <ChevronLeft className="h-4 w-4" />
           Back to Services
