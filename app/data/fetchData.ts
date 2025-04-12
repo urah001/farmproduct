@@ -30,7 +30,7 @@ type itemFace = {
 };
 
 export async function getAllProducts() {
-  const res = await fetch("http://localhost:1337/api/posts?populate=*", {
+  const res = await fetch("http://localhost:1337/api/products?populate=*", {
     next: { revalidate: 60 }, // For ISR (optional)
   });
 

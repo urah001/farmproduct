@@ -70,11 +70,11 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <Card className="overflow-hidden">
       {/* <Link href={`/testing/${product.slug}`}> */}
-      <Link href={`/testing/${product.slug}`}>
+      <Link href={`/products/${product.slug}`}>
         <div className="relative aspect-square">
-          <Image
+      <Image
             src={product.image || "/placeholder.svg"}
-            alt={product.name}
+            alt={product.name || "fresh food"}
             height={300}
             width={300}
             className="object-cover w-full h-full transition-transform hover:scale-105"
@@ -97,7 +97,7 @@ function ProductCard({ product }: { product: Product }) {
           className="w-full"
           onClick={() => addItem({ ...product, quantity: 1 })}
         >
-          Order Service
+          Add to cart
         </Button>
       </CardFooter>
     </Card>
