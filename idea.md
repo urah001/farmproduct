@@ -14,6 +14,7 @@ find like a booked icon
 - authentication
 - add landig page
 - remove the category images 
+-  change the categories pictures and name 
 
 # Where to Download Crop Images? 📸
 
@@ -93,3 +94,78 @@ _const routes =[{}]_
 
 **remember** to fix the `about.tsx`
 page contains mobile repondsiveness
+
+
+# category and food 
+so i want to start the full code now and this is what i want strapi to return : {
+    id: integer,
+    name: "String",
+    price: integer,
+    image: "string",
+    category: "string",
+    featured: boolen,
+    new: boolen,
+    slug: "string",
+  }, the slug is like a dynamic route that opens a page only for that item and im sure you know what i mean , and the category is like a grouped content manager that is used to join many items together used this to help explain how to go about the code , this are the category and each item that are stand alone on the website :  Grains & Cereals 🌾
+
+grain 
+    Rice
+    Wheat
+    Maize (Corn)
+    Barley
+    Millet
+    Sorghum
+
+2. Vegetables 🥦🥕
+
+    Tomatoes
+    Onions
+    Carrots
+    Spinach
+    Cabbage
+    Lettuce
+    Bell Peppers
+    Cucumbers
+    Eggplants
+
+3. Fruits 🍎🍌
+
+    Apples
+    Oranges
+    Bananas
+    Pineapples
+    Mangoes
+    Grapes
+    Watermelon
+    Strawberries
+
+4. Tubers & Root Crops 🍠
+
+    Cassava
+    Yam
+    Sweet Potatoes
+    Irish Potatoes
+    Ginger
+    Garlic
+
+5. Legumes & Nuts 🌰
+
+    Beans (Black Beans, Kidney Beans, Soybeans)
+    Peanuts
+    Cashew Nuts
+    Almonds
+
+6. Herbs & Spices 🌿
+
+    Basil
+    Mint
+    Thyme
+    Oregano
+    Turmeric
+    Cinnamon
+
+
+    # learning 
+
+    i just learnt to fetch data from the server , using just one server path ( meaning i didnt share the data just one table instead of two or more tables )
+    - next challendge is to try to do same but with more table to make the serve side more arranged 
