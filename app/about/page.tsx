@@ -1,72 +1,60 @@
-import Image from "next/image";
+"use client";
 
-const teamMembers = [
-  {
-    name: "STEPHEN SAMUEL URAH",
-    role: "Lead Developer | CSO",
-    image: "/team/your-image.jpg",
-    bio: "Passionate full-stack developer leading the project and ensuring seamless functionality, and the cheif security officer overseeing the security architecture of the company",
-  },
-  {
-    name: "Adagahi Bright ThankGod",
-    role: "UI/UX Designer",
-    image: "/team/john.jpg",
-    bio: "Creative UI/UX expert crafting user-friendly and visually appealing interfaces.",
-  },
-  {
-    name: "Yakubu Abdullahi Onu",
-    role: "Backend Engineer",
-    image: "/team/jane.jpg",
-    bio: "Backend specialist managing databases, APIs, and server-side logic.",
-  },
-  {
-    name: "Muhammed Mustapha OjimaOjo",
-    role: "Marketing & Outreach",
-    image: "/team/michael.jpg",
-    bio: "Building partnerships and promoting our platform to service providers and seekers.",
-  },
-  {
-    name: "Muktar Aliyu Omeiza",
-    role: "Security Analyst",
-    image: "/team/sarah.jpg",
-    bio: "Ensuring robust security measures and protecting user data.",
-  },
-  {
-    name: "Ogundijo Anuoluwapo Gabriel",
-    role: "Product Manager",
-    image: "/team/david.jpg",
-    bio: "Overseeing project timelines, feature roadmaps, and overall vision.",
-  },
-];
+import { ChevronLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-export default function About() {
+export default function AboutPage() {
   return (
-    <div className="container mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold text-center mb-6">About Us</h1>
-      <p className="text-lg text-center max-w-3xl mx-auto mb-12">
-        We are a team of six passionate students dedicated to bridging the gap
-        between service providers and seekers. Our platform simplifies
-        connections, making it easier to find and offer services seamlessly.
-      </p>
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8">
-        {teamMembers.map((member, index) => (
-          <div
-            key={index}
-            className="bg-white shadow-lg rounded-lg p-6 text-center"
-          >
-            <Image
-              src={member.image}
-              alt={member.name}
-              width={150}
-              height={150}
-              className="mx-auto rounded-full"
-            />
-            <h2 className="text-xl font-semibold mt-4">{member.name}</h2>
-            <p className="text-gray-500 text-sm">{member.role}</p>
-            <p className="text-gray-700 mt-2">{member.bio}</p>
+    <main className="flex-1">
+      <div className="container px-4 md:px-6 py-8">
+        <Button
+          variant="ghost"
+          className="mb-6"
+          onClick={() => window.history.back()}
+        >
+          <ChevronLeft className="h-4 w-4" />
+          Back to Previous Page
+        </Button>
+
+        <section className="text-center space-y-6">
+          <h1 className="text-4xl font-bold mb-4">Welcome to Our Marketplace</h1>
+          <p className="text-xl mb-6">
+            We offer a wide variety of quality products designed to meet your needs,
+            we have it all! Explore our categories and discover what suits you best.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-semibold">Our Mission</h2>
+              <p>
+                Our mission is to provide a seamless shopping experience with products that cater to
+                every customer. We believe in reliability, affordability, and excellent service.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h2 className="text-3xl font-semibold">Why Choose Us?</h2>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Wide Selection of Quality Products</li>
+                <li>Secure and Easy Checkout Process</li>
+                <li>Fast Delivery and Reliable Support</li>
+                <li>Exclusive Deals and Discounts</li>
+              </ul>
+            </div>
           </div>
-        ))}
+        </section>
+
+        <section className="text-center mt-12">
+          <h2 className="text-3xl font-semibold mb-4">Join Us Today!</h2>
+          <p className="text-lg mb-6">
+            Become part of our community and get access to exclusive offers, new product releases,
+            and more. Sign up now and start exploring!
+          </p>
+          <Button size="lg" className="w-full">
+            <Link href="/signup">Join Now</Link>
+          </Button>
+        </section>
       </div>
-    </div>
+    </main>
   );
 }
