@@ -1,42 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "next/navigation";
 import { ChevronLeft, Minus, Plus, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/components/ui/cart-provider";
 import Image from "next/image";
-import Link from "next/link";
-import { getAllProducts } from "@/app/data/fetchData";
-
-interface ProductType {
-  id: number;
-  name: string;
-  price: number;
-  slug: string;
-  description: string;
-  image: string;
-  features: string[];
-};
+import { allProducts } from "@/app/data/product"; // ✅ Import products
+//import Link from "next/link";
 
 export default function ProductSlug() {
   const { slug } = useParams();
-  const [product, setProduct] = useState<ProductType | null>(null);
   const [quantity, setQuantity] = useState(1);
   const { addItem } = useCart();
 
-  useEffect(() => {
-    async function fetchData() {
-      //const res = await fetch("http://localhost:1337/api/posts?populate=*");
-      const res = await getAllProducts();
-      //const data = await res.json();
-      const filteredData = [...res];
-      const found = filteredData.find((p: ProductType) => p.slug === slug);
-      setProduct(found || null);
-    }
-
-    fetchData();
-  }, [slug]);
+  const product = allProducts.find((p) => p.slug === slug);
 
   if (!product) {
     return (
@@ -45,8 +23,10 @@ export default function ProductSlug() {
         <p className="mb-6">
           Sorry, the product youre looking for doesnt exist.
         </p>
-        <Button asChild className="cursor-pointer">
-          <Link href="/products">Back to Fresh Products</Link>
+        <Button asChild className="cursor-pointer"  onClick={() => window.history.back()}>
+          {/* <Link href="/products"> */}
+          Back to Products
+          {/* </Link> */}
         </Button>
       </div>
     );
@@ -58,7 +38,7 @@ export default function ProductSlug() {
         <Button
           variant="ghost"
           className="mb-6"
-          onClick={() => window.history.back()}
+          onClick={() => window.history.back()} // JavaScript way of going back
         >
           <ChevronLeft className="h-4 w-4" />
           Back to Services
@@ -109,7 +89,7 @@ export default function ProductSlug() {
                 onClick={() => addItem({ ...product, quantity })}
               >
                 <ShoppingCart className="mr-2 h-5 w-5" />
-                Add to cart
+                Order Service
               </Button>
             </div>
           </div>

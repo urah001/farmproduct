@@ -1,8 +1,7 @@
 "use client";
 import { Suspense } from "react";
-//import ProductGrid from "@/components/ui/product-grid";
+import ProductGrid from "@/components/ui/product-grid";
 import { Button } from "@/components/ui/button";
-import ProductGrid from "./product-grid";
 
 export default function ProductPage() {
   return (

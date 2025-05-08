@@ -1,7 +1,7 @@
 "use client";
 import { Suspense } from "react";
 import { Button } from "@/components/ui/button";
-import { CategoryList } from "./category-list";
+import { CategoryList } from "@/components/ui/category-list";
 
 export default function CategoryPage() {
   return (
