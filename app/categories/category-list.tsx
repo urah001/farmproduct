@@ -33,6 +33,7 @@ export function CategoryList({ limit = 3 }: { limit: number }) {
                     alt={category.name}
                     width={300}
                     height={200}
+                    className="object-cover w-full h-full transition-transform hover:scale-105"
                   />
 
                   <div className="absolute inset-0 bg-black/40 flex items-end p-4">
