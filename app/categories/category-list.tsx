@@ -29,8 +29,8 @@ export function CategoryList({ limit = 3 }: { limit: number }) {
               <CardContent className="p-0">
                 <div className="relative aspect-square w-full h-full">
                   <Image
-                    alt={category.name || "fresh food"}
                     src={category.image || "/placeholder.svg"}
+                    alt={category.name || "fresh food"}
                     layout="fill"
                     objectFit="cover"
                     className="rounded-lg"

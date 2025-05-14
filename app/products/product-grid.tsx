@@ -90,7 +90,7 @@ function ProductCard({ product }: { product: Product }) {
         <Link href={`/testing/${product.slug}`} className="hover:underline">
           <h3 className="font-medium text-lg mb-2">{product.name}</h3>
         </Link>
-        <p className="font-bold">${product.price.toFixed(2)}</p>
+        <p className="font-bold">₦{product.price.toFixed(2)}</p>
       </CardContent>
       <CardFooter className="p-4 pt-0">
         <Button

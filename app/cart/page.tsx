@@ -57,9 +57,9 @@ export default function CartPage() {
                               <Image
                                 src={item.image || "/placeholder.svg"}
                                 alt={item.name}
-                                layout="fill" /* Stretches image to fit the parent */
-                                objectFit="cover" /* Ensures the image covers the area */
-                                className="rounded-lg"
+                                height={300}
+                                width={300}
+                                className="object-cover w-full h-full transition-transform hover:scale-105"
                               />
                             </div>
                             <div>
