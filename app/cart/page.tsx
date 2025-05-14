@@ -56,7 +56,7 @@ export default function CartPage() {
                             <div className="w-16 h-16 rounded overflow-hidden flex-shrink-0">
                               <Image
                                 src={item.image || "/placeholder.svg"}
-                                alt={item.name}
+                              alt={item.name || "/items"}
                                 height={300}
                                 width={300}
                                 className="object-cover w-full h-full transition-transform hover:scale-105"

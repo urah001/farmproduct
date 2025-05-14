@@ -29,12 +29,12 @@ export function CategoryList({ limit = 3 }: { limit: number }) {
               <CardContent className="p-0">
                 <div className="relative aspect-square w-full h-full">
                   <Image
-                    src={category.image || "/placeholder.svg"}
-                    alt={category.name || "fresh food"}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-lg"
+                    src={category.image}
+                    alt={category.name}
+                    width={300}
+                    height={200}
                   />
+
                   <div className="absolute inset-0 bg-black/40 flex items-end p-4">
                     <h3 className="text-white font-medium text-lg">
                       {category.name}

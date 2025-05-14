@@ -12,15 +12,15 @@ export async function getAllCategory() {
     id: item.id,
     name: item.name,
     slug: item.slug.toLowerCase(),
+    image: item.image?.url
+      ? `http://localhost:1337${item.image.url}`
+      : "/placeholder.png",
     products: item.products.map((p: any) => ({
       id: p.id,
       name: p.name,
       slug: p.slug,
       price: p.price,
-      image: item.image?.url
-      ? `http://localhost:1337${item.image.url}`
-      : "/placeholder.png", // Replace with actual image if available
-      description: "", // You can add this if available
+      // optionally use the category image if product has none
     })),
   }));
 
