@@ -34,7 +34,7 @@ export async function getAllProducts() {
     next: { revalidate: 60 }, // For ISR (optional)
   });
 
-  if (!res.ok) throw new Error("Failed to fetch products");
+//if (!res.ok) throw new Error("Failed to fetch products");
 
   const json = await res.json();
 
