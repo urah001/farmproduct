@@ -1,5 +1,9 @@
 import { HeroSection } from "@/components/ui/hero-section";
 import React from "react";
+import {
+  RegisterLink,
+  LoginLink,
+} from "@kinde-oss/kinde-auth-nextjs/components";
 
 const LandingPage = () => {
   return (
@@ -10,24 +14,18 @@ const LandingPage = () => {
           Univendor Fresh Farm Produce
         </h1>
         <div>
-          <a
-            href="/login"
-            className="px-4 py-2 text-green-700 font-semibold hover:underline"
-          >
+          <LoginLink className="px-4 py-2 text-green-700 font-semibold hover:underline">
             Login
-          </a>
-          <a
-            href="/signup"
-            className="ml-4 px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800"
-          >
+          </LoginLink>
+          <RegisterLink className="ml-4 px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800">
             Sign Up
-          </a>
+          </RegisterLink>
         </div>
       </header>
 
       {/* Main Section */}
       <main className="flex flex-col items-center text-center mt-10">
-      <HeroSection />
+        <HeroSection />
         <h2 className="text-3xl font-bold text-green-800">
           Fresh, Organic & Locally Sourced
         </h2>

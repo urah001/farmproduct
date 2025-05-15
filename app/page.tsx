@@ -1,17 +1,19 @@
-import Link from "next/link";
-import ProductGrid from "@/components/ui/product-grid";
-import { FeaturedProducts } from "@/components/ui/featured-products";
-//import { HeroSection } from "@/components/ui/hero-section";
+// app/page.tsx
+//import { redirect } from "next/navigation";
+//import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { CategoryList } from "@/components/ui/category-list";
-import { redirect } from "next/navigation";
+import { FeaturedProducts } from "@/components/ui/featured-products";
+import ProductGrid from "@/components/ui/product-grid";
+import Link from "next/link";
 
-export default function Home() {
-  //a simple auth that redirect user is they are logged in or not , just for testing purposes only 
-  //const user = true;
-  const user = false;
-  return user ? (
+export default async function Home() {
+  //const { isAuthenticated } = getKindeServerSession();
+  //const userIsAuthenticated = await isAuthenticated();
+
+ 
+
+  return (
     <main className="flex-1">
-      {/* <HeroSection /> */}
       <div className="container px-4 md:px-6 py-8">
         <section>
           <div className="flex items-center justify-between mb-2">
@@ -36,6 +38,7 @@ export default function Home() {
           </div>
           <FeaturedProducts />
         </section>
+
         <section className="py-12">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold tracking-tight">New Workers</h2>
@@ -47,7 +50,5 @@ export default function Home() {
         </section>
       </div>
     </main>
-  ) : (
-    redirect("/landing")
   );
 }
