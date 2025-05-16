@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/rules-of-hooks */
+/// eslint-disable react-hooks/rules-of-hooks 
 // "use client";
 // stephengamer246
 // import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
@@ -13,10 +13,8 @@ export default async function AccountPage() {
   const {getUser} = getKindeServerSession(); 
   const  user  = await getUser();
 
-  const { isAuthenticated } = getKindeServerSession();
-   const userIsAuthenticated = await isAuthenticated();
-console.log("user",user)
-  if (!userIsAuthenticated) {
+  
+  if (!user) {
     return (
       <div className="flex justify-center items-center h-screen">
         <p>Loading account...</p>

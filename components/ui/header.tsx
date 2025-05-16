@@ -48,12 +48,12 @@ export default function Header() {
         </Sheet>
         <Link href="/" className="ml-4 md:ml-0 flex items-center gap-2">
           {/* header icon top left corner */}
-          <Apple className="h-6 w-6" />
           {/* header name beside icon at left corner*/}
-          <span className="font-bold text-xl">FarmerHome[]</span>
+          <span className="font-bold text-xl">FarmerHome</span>
+          <Apple className="h-6 w-6" />
         </Link>
         <nav className="mx-6 hidden md:flex items-center gap-6 text-sm">
-        {/* mapping to display link in a row format */}
+          {/* mapping to display link in a row format */}
           {routes.map((route) => (
             <Link
               key={route.href}

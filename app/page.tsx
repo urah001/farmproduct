@@ -1,8 +1,5 @@
 // app/page.tsx
 import { redirect } from "next/navigation";
-//import { CategoryList } from "@/components/ui/category-list";
-//import { FeaturedProducts } from "@/components/ui/featured-products";
-//import ProductGrid from "@/components/ui/product-grid";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
 //import { CategoryList } from "./category-list";
