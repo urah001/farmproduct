@@ -15,7 +15,7 @@ type Product = {
   image: string;
   name: string;
   price: number;
-  category: string; // optional: if you're using it in the filter
+  category: string; 
   description?: string;
 };
 

@@ -50,9 +50,9 @@ export default function AboutPage() {
             Become part of our community and get access to exclusive offers, new product releases,
             and more. Sign up now and start exploring!
           </p>
-          <Button size="lg" className="w-full">
+          {/* <Button size="lg" className="w-full">
             <Link href="/signup">Join Now</Link>
-          </Button>
+          </Button> */}
         </section>
       </div>
     </main>
