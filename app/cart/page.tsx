@@ -41,8 +41,8 @@ export default function CartPage() {
                   <thead className="bg-muted/50">
                     <tr>
                       {/* <th className="text-left p-4">Product</th> */}
-                      <th className="text-left p-4">Worker</th>
-                      <th className="text-center p-4">Hours</th>
+                      <th className="text-left p-4">Products</th>
+                      <th className="text-center p-4">Amount/kg</th>
                       <th className="text-right p-4">Price</th>
                       <th className="text-right p-4">Total</th>
                       <th className="p-4"></th>
