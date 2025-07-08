@@ -145,7 +145,9 @@ export default function CartPage() {
 
               <Button size="lg" className="w-full">
                 {/* Proceed to Checkout */}
-                Proceed to Connect
+                <Link href={"pickup"}>
+                Proceed to Checkout
+                </Link>
               </Button>
               {/* remove  below*/}
               {/* <div className="text-center text-sm text-muted-foreground">
