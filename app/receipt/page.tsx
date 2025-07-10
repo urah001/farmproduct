@@ -1,14 +1,11 @@
-"use client";
-
-import { useCart } from "@/components/ui/cart-provider";
-import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
+//import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
 import dayjs from "dayjs";
+import Rcart from "../receiptData/receiptHead";
+import UserInfoBox from "@/components/getFullname";
+//import UserInfoBox from "../../components/getFullname";
 
 export default function ReceiptPage() {
-  const { items, totalPrice } = useCart();
-  
-  const { user } = useKindeAuth();
-  
+  //const { user } = useKindeAuth();
 
   const currentDate = dayjs().format("MMMM D, YYYY h:mm A");
 
@@ -19,56 +16,21 @@ export default function ReceiptPage() {
         <p className="text-sm">Pickup Order Summary</p>
         <p className="text-xs text-gray-500">{currentDate}</p>
       </div>
+      <UserInfoBox/>
+      <Rcart />
 
-      {user && (
-        <div className="text-sm mb-4">
-          <p>
-            <strong>Name:</strong> {user!.given_name} {user!.family_name}
-          </p>
-          <p>
-            <strong>Email:</strong> {user.email}
-          </p>
-        </div>
-      )}
+      <div className="text-sm mb-4">{/* <UserInfoBox/> */}</div>
 
       {/* Items */}
-      <div className="border-b border-dashed pb-4 mb-4">
-        {items.length > 0 ? (
-          items.map((item, idx) => (
-            <div key={idx} className="flex justify-between text-sm">
-              <div>
-                <p>{item.name}</p>
-                <p className="text-xs text-gray-500">Qty: {item.quantity}</p>
-              </div>
-              <p>₦{(item.price * item.quantity).toLocaleString()}</p>
-            </div>
-          ))
-        ) : (
-          <p className="text-center text-gray-400 text-sm">No items in cart</p>
-        )}
-      </div>
-
-      <div className="text-sm space-y-2 mb-4">
-        <div className="flex justify-between">
-          <span>Subtotal:</span>
-          <span>₦{totalPrice.toFixed(2)}</span>
-        </div>
-        <div className="flex justify-between">
-          <span>Tax:</span>
-          <span>₦0.00</span>
-        </div>
-        <div className="flex justify-between font-bold text-base">
-          <span>Total:</span>
-          <span>₦{totalPrice.toFixed(2)}</span>
-        </div>
-      </div>
 
       {/* Footer Note */}
       <div className="border-t border-dashed pt-4 text-center text-xs text-gray-500">
-      This order is not valid without presentation at the pickup point. Please present it at the selected station to finalize payment and collect your items.
+        This order is not valid without presentation at the pickup point. Please
+        present it at the selected station to finalize payment and collect your
+        items.
       </div>
     </div>
   );
 }
 
-// add each product name 
+// add each product name
