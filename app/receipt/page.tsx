@@ -6,15 +6,17 @@ import dayjs from "dayjs";
 
 export default function ReceiptPage() {
   const { items, totalPrice } = useCart();
+  
   const { user } = useKindeAuth();
   
+
   const currentDate = dayjs().format("MMMM D, YYYY h:mm A");
 
   return (
     <div className="max-w-md mx-auto border border-gray-300 shadow-sm p-6 mt-10 font-mono bg-white">
       <div className="text-center border-b border-dashed pb-4 mb-4">
         <h2 className="text-xl font-bold">FamerHome Market</h2>
-        <p className="text-sm">Receipt</p>
+        <p className="text-sm">Pickup Order Summary</p>
         <p className="text-xs text-gray-500">{currentDate}</p>
       </div>
 
@@ -63,8 +65,10 @@ export default function ReceiptPage() {
 
       {/* Footer Note */}
       <div className="border-t border-dashed pt-4 text-center text-xs text-gray-500">
-        Thank you for supporting local farmers!
+      This order is not valid without presentation at the pickup point. Please present it at the selected station to finalize payment and collect your items.
       </div>
     </div>
   );
 }
+
+// add each product name 
