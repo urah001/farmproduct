@@ -1,5 +1,6 @@
 "use client"
 import { useCart } from "@/components/ui/cart-provider";
+import PrintReceiptComp from "./printData";
 
 export default function Rcart() {
   const { items, totalPrice } = useCart();
@@ -33,6 +34,7 @@ export default function Rcart() {
           <span>Total:</span>
           <span>₦{totalPrice.toFixed(2)}</span>
         </div>
+      <PrintReceiptComp/>
       </div>
     </>
   );

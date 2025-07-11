@@ -6,8 +6,9 @@ import UserInfoBox from "@/components/getFullname";
 
 export default function ReceiptPage() {
   //const { user } = useKindeAuth();
-
   const currentDate = dayjs().format("MMMM D, YYYY h:mm A");
+
+  
 
   return (
     <div className="max-w-md mx-auto border border-gray-300 shadow-sm p-6 mt-10 font-mono bg-white">
@@ -29,6 +30,8 @@ export default function ReceiptPage() {
         present it at the selected station to finalize payment and collect your
         items.
       </div>
+    
+    
     </div>
   );
 }
